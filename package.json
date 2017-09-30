@@ -1,0 +1,24 @@
+{
+  "name": "spoty-cmd",
+  "version": "1.0.0",
+  "description": "Spotify CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist && clear && node ./dist/"
+  },
+  "author": "Daghan Gunay",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "got": "^7.1.0",
+    "ink": "^0.3.1",
+    "ink-redux": "^1.0.0",
+    "ink-select-input": "^1.0.0",
+    "ink-text-input": "^1.1.1",
+    "redux": "^3.7.2",
+    "redux-saga": "^0.15.6"
+  }
+}
