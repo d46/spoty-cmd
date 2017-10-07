@@ -11,7 +11,7 @@ const fetchSearchApi = (query) => {
 	return got(`https://api.spotify.com/v1/search?q=${query}&type=track`, {
 		headers: {
 			Accept: "application/json",
-			Authorization: "Bearer BQDAPAa1P4KM9Gr5Imx5JUEhOwHZRxGIIqaiVb55mZ3bml3ojRSATOL6Cuz2WT9Eadxs7B4UQ5Mt63JSGvNz3P39-PTg_yGrXzfVfPew2X_IygpVuEuv5swoYJQDximV-e7nJCUy4yIcZkBiNIT9T6CkippNDdgc_vVpcYL99JWiYmA"
+			Authorization: "Bearer BQC5lEcYu4qsO0W8InnPiMUzzhzLb0iXbOPRnDdPwyVNdNxeAyZvwBQXaY_tjgA21KaR0QbXmbkuT1kxHLJhXvDM_mDi4EN_84JKaKDQgVDLWvxY_5hGWr6DSqYpUn8i7m7XR0seoWpepaww982VeXlXpRaaD01Kr1Q"
 		},
 	})
 };
@@ -21,7 +21,7 @@ const fetchSelectApi = (item) => {
 		headers: {
 			Accept: "application/json",
 			"Content-Type": "application/json",
-			Authorization: "Bearer BQDAPAa1P4KM9Gr5Imx5JUEhOwHZRxGIIqaiVb55mZ3bml3ojRSATOL6Cuz2WT9Eadxs7B4UQ5Mt63JSGvNz3P39-PTg_yGrXzfVfPew2X_IygpVuEuv5swoYJQDximV-e7nJCUy4yIcZkBiNIT9T6CkippNDdgc_vVpcYL99JWiYmA"
+			Authorization: "Bearer BQC5lEcYu4qsO0W8InnPiMUzzhzLb0iXbOPRnDdPwyVNdNxeAyZvwBQXaY_tjgA21KaR0QbXmbkuT1kxHLJhXvDM_mDi4EN_84JKaKDQgVDLWvxY_5hGWr6DSqYpUn8i7m7XR0seoWpepaww982VeXlXpRaaD01Kr1Q"
 		},
 		method: 'PUT',
 		body: JSON.stringify({
@@ -31,7 +31,7 @@ const fetchSelectApi = (item) => {
 			}
 		})
 	})
-}
+};
 
 function* fetchSearch(action) {
 
@@ -134,8 +134,7 @@ class Counter extends Component {
 			</div>
 		);
 	}
-}
-;
+};
 
 const mapStateToProps = state => ({
 	query: state.query,
