@@ -1,12 +1,12 @@
 {
   "name": "spoty-cmd",
-  "version": "1.0.11",
+  "version": "1.0.13",
   "description": "Spotify CLI",
   "scripts": {
-    "prebuild": "npm install",
     "build": "babel src --out-dir dist && cp -rf public dist",
     "prestart": "babel src --out-dir dist",
-    "start": "cp -rf public dist && node ./dist"
+    "start": "cp -rf public dist && node ./dist",
+    "prepublish": "npm run build"
   },
   "author": "Daghan Gunay",
   "license": "MIT",
