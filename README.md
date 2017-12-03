@@ -1,4 +1,4 @@
-![](media/live-prompt.gif) ![](media/command.gif)
+![](media/usage.gif)
 
 > Simple Spotify CLI controller
 
