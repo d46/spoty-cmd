@@ -7,7 +7,8 @@ export default class CLI extends Component {
 		super(props);
 
 		this.state = {
-			query: ''
+			query: '',
+			single: process.argv.length < 3
 		}
 
 		this.handleChangeQuery = this.handleChangeQuery.bind(this);
@@ -37,15 +38,23 @@ export default class CLI extends Component {
 	}
 
 	render(props) {
+		// process.argv.forEach(function (val, index, array) {
+		// 	console.log(index + ': ' + val);
+		// });
 		return (
 			<div>
-				<div>
-					<TextInput
-						value={this.state.query}
-						onChange={this.handleChangeQuery}
-					/>
-				</div>
-				<SelectInput items={this.parseData(props.search)} onSelect={props.handleSelect}/>
+				{
+					this.state.single &&
+					<div>
+						<div>
+							<TextInput
+								value={this.state.query}
+								onChange={this.handleChangeQuery}
+							/>
+						</div>
+						<SelectInput items={this.parseData(props.search)} onSelect={props.handleSelect}/>
+					</div>
+				}
 			</div>
 		);
 	}

@@ -1,13 +1,12 @@
 {
   "name": "spoty-cmd",
-  "version": "1.0.1",
+  "version": "1.0.9",
   "description": "Spotify CLI",
-  "main": "index.js",
   "scripts": {
-    "build:cli": "babel src/cli --out-dir dist/cli",
-	"build:app": "babel src/ --out-dir dist && clear",
-	"cli" : "node ./dist/cli/",
-	"app" : "node ./dist/"
+    "prebuild": "npm install",
+    "build": "babel src --out-dir dist && cp -rf public dist",
+    "prestart": "babel src --out-dir dist",
+    "start": "cp -rf public dist && node ./dist"
   },
   "author": "Daghan Gunay",
   "license": "MIT",
@@ -23,12 +22,23 @@
     "ink-select-input": "^1.0.0",
     "ink-text-input": "^1.1.1",
     "openurl": "^1.1.1",
+    "opn": "^5.1.0",
     "querystring": "^0.2.0",
     "redux": "^3.7.2",
     "redux-saga": "^0.15.6",
     "request": "^2.83.0"
   },
+  "bin": {
+    "spoty": "./bin/spoty.js"
+  },
   "devDependencies": {
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0"
-  }
+  },
+  "preferGlobal": true,
+  "files": [
+	"bin",
+	"public",
+	"dist",
+	"src"
+  ]
 }
