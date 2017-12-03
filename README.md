@@ -11,6 +11,7 @@ React.js, Redux, Ink, Spotify command-line integration tool
 ## Usage
 ### Installation
 ```yarn install -g spoty-cmd```
+
 ```npm install -g spoty-cmd```
 
 ### Auth
