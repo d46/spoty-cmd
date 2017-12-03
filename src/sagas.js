@@ -58,6 +58,7 @@ function* fetchSingleSelect(action) {
 		const play = yield call(api.play, item, token);
 		const status = play.statusCode;
 		if(status === 204 || status === 200) {
+			console.log(`Playing: ${item.artists[0].name} - ${item.name}`);
 			process.exit();
 		}
 	} catch (e) {
