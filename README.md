@@ -1,4 +1,4 @@
-> Simple Spotify cli controller
+> Simple Spotify CLI controller
 
 React.js, Redux, Ink, Spotify command-line integration tool
 
