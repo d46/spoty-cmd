@@ -1,6 +1,6 @@
 {
   "name": "spoty-cmd",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Spotify CLI",
   "scripts": {
     "prebuild": "npm install",
@@ -36,9 +36,9 @@
   },
   "preferGlobal": true,
   "files": [
-	"bin",
-	"public",
-	"dist",
-	"src"
+    "bin",
+    "public",
+    "dist",
+    "src"
   ]
 }
