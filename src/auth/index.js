@@ -114,8 +114,7 @@ app.get('/callback', function(req, res) {
 
 				const access_token = body.access_token,
 					refresh_token = body.refresh_token
-
-				fs.writeFile('./token', ('Bearer ' + access_token))
+				fs.writeFile(`${__dirname}/token`, ('Bearer ' + access_token))
 
 				// we can also pass the token to the browser to make requests from there
 				res.redirect('/#' +

@@ -6,7 +6,7 @@ let token
 
 let tokenReader = ()=>{
 	return new Promise((resolve, reject)=>{
-		fs.readFile('./token','utf8',(err, data)=>{
+		fs.readFile(`${__dirname}/auth/token`,'utf8',(err, data)=>{
 			if(err) {
 				reject(err)
 			}

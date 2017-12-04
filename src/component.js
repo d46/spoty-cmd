@@ -7,7 +7,7 @@ class CLI extends Component {
 
 	constructor(props) {
 		super(props)
-
+		console.warn(props.single);
 		this.state = {
 			query: '',
 			single: props.single,
@@ -43,7 +43,7 @@ class CLI extends Component {
 		return (
 			<div>
 				{
-					this.state.single &&
+					!this.state.single &&
 					<div>
 						<div>
 							<TextInput
@@ -60,7 +60,7 @@ class CLI extends Component {
 }
 
 CLI.propTypes = {
-	single: PropTypes.boolean.isRequired,
+	single: PropTypes.bool.isRequired
 }
 
 export default CLI
