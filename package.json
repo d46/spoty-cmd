@@ -3,10 +3,12 @@
   "version": "1.0.13",
   "description": "Spotify CLI",
   "scripts": {
+    "precommit": "lint-js",
     "build": "babel src --out-dir dist && cp -rf public dist",
     "prestart": "babel src --out-dir dist",
     "start": "cp -rf public dist && node ./dist",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "lint-js": "eslint --quiet --ignore-path .gitignore --ignore-pattern \"!**/.*\" ."
   },
   "author": "Daghan Gunay",
   "license": "MIT",
@@ -23,6 +25,7 @@
     "ink-text-input": "^1.1.1",
     "openurl": "^1.1.1",
     "opn": "^5.1.0",
+    "prop-types": "^15.6.0",
     "querystring": "^0.2.0",
     "redux": "^3.7.2",
     "redux-saga": "^0.15.6",
@@ -32,7 +35,11 @@
     "spoty": "./bin/spoty.js"
   },
   "devDependencies": {
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0"
+    "babel-eslint": "7",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "eslint": "3.x",
+    "eslint-config-customink": "^2.1.1",
+    "eslint-plugin-react": "^7.5.1"
   },
   "preferGlobal": true,
   "files": [
