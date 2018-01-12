@@ -1,13 +1,16 @@
-import {h,Component} from "ink" // eslint-disable-line no-unused-vars
+import {Component} from "ink" // eslint-disable-line no-unused-vars
 import SelectInput from "ink-select-input"
 import TextInput from "ink-text-input"
 import PropTypes from "prop-types"
 
 class CLI extends Component {
 
+	propTypes = {
+		single: PropTypes.bool.isRequired,
+	}
+
 	constructor(props) {
 		super(props)
-		console.warn(props.single);
 		this.state = {
 			query: '',
 			single: props.single,
@@ -57,10 +60,6 @@ class CLI extends Component {
 			</div>
 		)
 	}
-}
-
-CLI.propTypes = {
-	single: PropTypes.bool.isRequired
 }
 
 export default CLI
