@@ -5,10 +5,6 @@ import PropTypes from "prop-types"
 
 class CLI extends Component {
 
-	propTypes = {
-		single: PropTypes.bool.isRequired,
-	}
-
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -60,6 +56,10 @@ class CLI extends Component {
 			</div>
 		)
 	}
+}
+
+CLI.propTypes = {
+	single: PropTypes.bool.isRequired,
 }
 
 export default CLI

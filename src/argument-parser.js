@@ -1,4 +1,4 @@
-const args = process.argv
+export const hasInitialTask = process.argv.length > 2
 
 const subTasks = [
 	{
@@ -28,20 +28,20 @@ const subTasks = [
 		task: (value, store) => {
 			store.dispatch({
 				type: 'SINGLE_FETCH_REQUESTED',
-				query: args.join(" "),
+				query: value.join(" "),
 			})
 		},
 	},
 ]
-const analyzArgument = (store) => {
-	// Parse args
-	const args = args.slice(2)
-	// Check args has reserved keys
-	subTasks.forEach(task => {
-		if(task.value.indexOf(args[0]) > -1) {
-			task.task(args.slice(1).join(" "), store)
-		}
-	})
-}
 
-export default analyzArgument
+export const getTasks = () => {
+	// Parse args
+	const args = process.argv.slice(2);
+	// Collect reserved keys
+	const tasks = subTasks.filter(task => task.value.indexOf(args[0]) > -1);
+	const input = args.slice(1).join(" ");
+	return {
+		tasks,
+		input
+	}
+}
